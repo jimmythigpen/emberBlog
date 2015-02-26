@@ -1,0 +1,16 @@
+.post {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  width: 500px;
+}
+
+.new-title {
+  display:block;
+  margin: 5px;
+}
+
+.new-body {
+  display:block;
+  margin: 5px;
+}

@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('posts', { path: '/' }, function() {
+  this.resource('posts', { path: '/' }, function() {
     this.route('new');
   });
 });

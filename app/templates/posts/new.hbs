@@ -1,3 +1,11 @@
-<h2>New Post</h2>
+<h2>Create a new post</h2>
+
+<form>
+{{input type="text" class="new-title" placeholder="Enter a new title" value=newTitle}}
+
+{{textarea class="new-body" placeholder="Enter a new post" value=newBody}}
+
+<button id="create-post" {{action "createPost"}}>Create</button>
+</form>
 
 {{outlet}}
