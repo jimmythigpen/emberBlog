@@ -1,0 +1,11 @@
+<h4>Viewing Posts</h4>
+{{log model}}
+{{#link-to "posts.new"}}<strong>New Post</strong>{{/link-to}}
+
+{{#each post in model}}
+ <h2>
+   {{post.title}}
+ </h2>
+ {{/each}}
+
+{{outlet}}
