@@ -1,12 +1,17 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+var PostController = Ember.ObjectController.extend({
+  contenteditable: false,
   actions: {
-    delete: function() {
-      var id = this.get('model.objectId');
-      Ember.$.ajax("https://api.parse.com/1/classes/Post/" + id, {
-        type: 'DELETE'
-      });
+
+  editPost: function() {
+   this.set('contenteditable', true);
+
+
+
     }
-  }
+  },
+
 });
+
+export default PostController;

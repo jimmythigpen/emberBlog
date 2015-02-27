@@ -1,17 +1,20 @@
-<h4>Viewing Posts</h4>
 {{#link-to "posts.new"}}<strong>New Post</strong>{{/link-to}}
 
-{{#each post in model}}
+{{outlet}}
+
+{{#each post in model itemController="post"}}
 <div class="post">
+  {{#if post.isEditing}}
   <h2>
    {{post.title}}
   </h2>
   <div>
     {{post.body}}
   </div>
-  <button {{action "edit"}}>Edit</button>
-  <button {{action "delete"}}>Delete</button>
+  <button {{action "editPost" }}>Edit</button>
+  <button {{action "delete" post}}>Delete</button>
+  {{else}}
+  <h2>OMG EDITING!</h2>
+  {{/if}}
 </div>
  {{/each}}
-
- {{outlet}}
