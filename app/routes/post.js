@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+var PostRoute = Ember.Route.extend({
+  actions: {
+    save: function(post) {
+    console.log(post);
 
-
+    }
+  },
 
 });
+
+export default PostRoute;

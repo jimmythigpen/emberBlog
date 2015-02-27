@@ -5,16 +5,25 @@
 {{#each post in model itemController="post"}}
 <div class="post">
   {{#if post.isEditing}}
+
   <h2>
-   {{post.title}}
+   {{post.model.title}}
   </h2>
-  <div>
-    {{post.body}}
+  <div class='bodytext'>
+    {{post.model.body}}
   </div>
   <button {{action "editPost" }}>Edit</button>
-  <button {{action "delete" post}}>Delete</button>
+  <button {{action "delete" post.model}}>Delete</button>
+
   {{else}}
-  <h2>OMG EDITING!</h2>
+  <!-- <h2 contenteditable="true"> -->
+   {{input value=post.model.title}}
+  <!-- </h2> -->
+  <div class='editbodytext' contenteditable="true">
+    {{post.model.body}}
+  </div>
+  <button {{action "save" post.model}}>Save</button>
+  <button {{action "delete" post.model}}>Delete</button>
   {{/if}}
 </div>
  {{/each}}
