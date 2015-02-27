@@ -2,28 +2,28 @@
 
 {{outlet}}
 
-{{#each post in model itemController="post"}}
+{{#each post in sortedPosts itemController="post"}}
 <div class="post">
   {{#if post.isEditing}}
-
   <h2>
    {{post.model.title}}
   </h2>
-  <div class='bodytext'>
+  <div>
     {{post.model.body}}
   </div>
   <button {{action "editPost" }}>Edit</button>
   <button {{action "delete" post.model}}>Delete</button>
 
   {{else}}
-  <!-- <h2 contenteditable="true"> -->
+  <h2>
    {{input value=post.model.title}}
-  <!-- </h2> -->
-  <div class='editbodytext' contenteditable="true">
-    {{post.model.body}}
+  </h2>
+  <div>
+    {{textarea value=post.model.body}}
   </div>
   <button {{action "save" post.model}}>Save</button>
   <button {{action "delete" post.model}}>Delete</button>
+
   {{/if}}
 </div>
  {{/each}}

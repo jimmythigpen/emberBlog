@@ -11,9 +11,10 @@ var PostController = Ember.Controller.extend({
   save: function(post){
     var id = post.objectId;
     Ember.$.ajax("https://api.parse.com/1/classes/Post/" + id, {
-      type: 'PUT'
+      type: 'PUT',
+      data: JSON.stringify(post)
     });
-    console.log(post);
+    this.set('isEditing', true);
   }
 },
 

@@ -16,6 +16,9 @@ var PostsRoute = Ember.Route.extend({
       return response.results;
     });
   },
+  afterModel:function(){
+    console.log('HELLO');
+  }
 });
 
 export default PostsRoute;

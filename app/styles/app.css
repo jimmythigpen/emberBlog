@@ -48,17 +48,11 @@ form {
   border-radius: 3px;
 }
 
-.editbodytext {
-  border: 1px solid #8A8A8A;
+textarea {
+  width: 485px;
+  margin: 8px auto;
   padding: 3px;
   border-radius: 3px;
   outline: none;
-  margin-bottom: 3px;
-}
-
-.bodytext {
-  border: 1px solid #D8D8D8;
-  padding: 3px;
-  border-radius: 3px;
-  margin-bottom: 3px;
+  resize: none;
 }

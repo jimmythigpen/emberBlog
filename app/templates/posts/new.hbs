@@ -3,8 +3,7 @@
 
 {{textarea class="new-body" placeholder="Enter a new post" value=newBody}}
 
-<button id="create-post" {{action "createPost"}}>Create</button>
+<button {{action "createPost" newTitle newBody}}>Create</button>
 </form>
-
 
 {{outlet}}
