@@ -15,9 +15,6 @@ var PostsRoute = Ember.Route.extend({
     return Ember.$.ajax('https://api.parse.com/1/classes/Post').then(function(response){
       return response.results;
     });
-  },
-  afterModel:function(){
-    console.log('HELLO');
   }
 });
 
